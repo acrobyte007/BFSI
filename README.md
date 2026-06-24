@@ -91,7 +91,7 @@ This processes the cleaned data and outputs results to `data/final_output.csv`.
 ### 8. Launch Streamlit Dashboard
 
 ```bash
-streamlit run app.py
+streamlit run main.py
 ```
 
 Open your browser and navigate to: [http://localhost:8501](http://localhost:8501)
