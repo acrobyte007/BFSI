@@ -147,25 +147,3 @@ if "sentiment" in df.columns:
 
     st.plotly_chart(fig3, use_container_width=True)
 
-# -------------------------
-# TOP DISCUSSION THEMES
-# -------------------------
-if "title" in df.columns:
-    top_titles = (
-        df["title"]
-        .value_counts()
-        .head(10)
-        .rename_axis("topic")
-        .reset_index(name="count")
-        .sort_values(by="count", ascending=True)
-    )
-
-    fig4 = px.bar(
-        top_titles,
-        x="count",
-        y="topic",
-        orientation="h",
-        title="Top Discussion Themes"
-    )
-
-    st.plotly_chart(fig4, use_container_width=True)
